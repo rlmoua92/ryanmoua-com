@@ -52,7 +52,7 @@ class LayoutContainer extends Component {
 					]
 				}
 			],
-			schoolProjects: [
+/*			schoolProjects: [
 				{
 					name: 'File System',
 					lang: 'Python',
@@ -69,7 +69,7 @@ class LayoutContainer extends Component {
 					links: [
 					]
 				}
-			],
+			],*/
 			currentContent: 'about-me',
 			isShowingBanner: true,
 		}
@@ -106,7 +106,7 @@ class LayoutContainer extends Component {
 	render() {
 		const {
 			sideProjects,
-			schoolProjects,
+//			schoolProjects,
 			currentContent,
 			isShowingBanner,
 		} = this.state;
@@ -114,7 +114,7 @@ class LayoutContainer extends Component {
 		return (
 			<Layout 
 				sideProjects={sideProjects} 
-				schoolProjects={schoolProjects} 
+//				schoolProjects={schoolProjects} 
 				onNavigationClick={this.onNavigationClick}
 				currentContent={currentContent}
 				isShowingBanner={isShowingBanner}
