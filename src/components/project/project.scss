@@ -1,0 +1,46 @@
+@import '../../common.scss';
+
+.project {
+	flex-basis: 100%;
+	padding: .25em;
+
+	.project-img {
+		overflow: hidden;
+		margin-bottom: .5em;
+
+		a {
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+
+	.project-name {
+		font-weight: bold;
+	}
+
+	.project-links {
+		align-items: center;
+		justify-content: center;
+
+		a {
+			padding: .25em;
+
+			img {
+				max-width: 64px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+	.project {
+		flex-basis: 50%;
+	}
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+	.project {
+		flex-basis: 33%;
+	}
+}

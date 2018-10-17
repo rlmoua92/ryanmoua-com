@@ -1,0 +1,46 @@
+@import '../../common.scss';
+
+form {
+	max-width: 700px;
+	justify-content: flex-end;
+
+	.form-field {
+		padding: 0 .25em;
+		flex-basis: 100%;
+
+		input {
+			margin-bottom: .5em;
+			padding: .25em;
+			background-color: transparent;
+			border: 0;
+			border-bottom: 1px solid $text-color;
+			color: $text-color;
+			font-size: 1em;
+		}
+
+		input:focus {
+			outline: 0;
+			border-color: $active-link-color;
+		}
+
+		textarea {
+			@extend input;
+			height: 100px;
+		}
+	}
+
+	button {
+		font-size: 1em;
+		padding: .5em 1.5em;
+		margin-top: 2em;
+		border-radius: .25em;
+	}
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+	form {
+		.form-field:not(.flex-100) {
+			flex-basis: 50%;
+		}
+	}
+}

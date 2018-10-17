@@ -1,0 +1,43 @@
+@import '../../common.scss';
+
+.navigation {
+	position: fixed;
+	height: 100%;
+	top: 0;
+	z-index: 1;
+
+	&-item {
+		font-size: 1.5em;
+		border-top-left-radius: .25em;
+		border-bottom-left-radius: .25em;
+
+		button {
+			font-size: 1em;
+			background-color: transparent;
+			padding: 1em .25em;
+			border: 0;
+			color: $link-color;
+
+			.navigation-text {
+				font-size: .325em;
+				text-transform: uppercase;
+			}
+
+			a {
+				text-decoration: none;
+				color: $link-color;
+			}
+		}
+
+		button:focus {
+			outline: 0;
+		}
+	}
+
+	&-item.active {
+
+		button {
+			padding-bottom: 3em;
+		}
+	}
+}

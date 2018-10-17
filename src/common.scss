@@ -1,0 +1,79 @@
+$body-bg-color: #000;
+$text-color: #000;
+$link-color: #fff;
+$active-link-color: #2196f3;
+$section-bg-color: #fff8e2;
+
+$mobile-breakpoint: 320px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
+
+$font: Helvetica, sans-serif;
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	background-color: $body-bg-color;
+	color: $text-color;
+	margin: 0;
+	padding: 0;
+	font-family: $font;
+}
+
+a:hover, button:hover {
+	opacity: .75;
+	cursor: pointer;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.flex-100 {
+	flex-basis: 100%;
+}
+
+.flex-50 {
+	flex-basis: 50%;
+}
+
+.flex-33 {
+	flex-basis: 33%;
+}
+
+.flex-grow {
+	flex-grow: 1;
+}
+
+.space-around {
+	justify-content: space-around;
+}
+
+.v-align-center {
+	align-items: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.w-100 {
+	width: 100%;
+}

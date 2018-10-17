@@ -1,0 +1,12 @@
+@import '../../common.scss';
+
+.section {
+	background-color: $section-bg-color;
+
+	&-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding-left: 5em;
+		overflow: auto;
+	}
+}

@@ -1,0 +1,15 @@
+@import '../../common.scss';
+
+.banner {
+	background-image: url(http://blog.brianfancherphotography.com/wp-content/uploads/2011/03/San-Diego-110320-107.jpg);
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+
+	&-content {
+		overflow: auto;
+	}
+}
