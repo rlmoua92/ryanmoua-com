@@ -6,11 +6,10 @@ const Navigation = (props) => {
 	const {
 		navItems,
 		currentContent,
-		positionLeft,
 	} = props;
 
 	return (
-		<div className="navigation flex flex-column text-center" style={{ left: positionLeft }}>
+		<div className="navigation flex flex-column text-center">
 			{
 				navItems.map(item => {
 					const className = "navigation-item" + (currentContent === item.linkID ? " active" : "");

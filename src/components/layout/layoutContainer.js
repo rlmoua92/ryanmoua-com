@@ -11,7 +11,7 @@ class LayoutContainer extends Component {
 					name: 'BasicYGO',
 					lang: 'Python',
 					desc: 'A CLI application based on "Yu-Gi-Oh!"" Trading Card Game. Using the most basic of the card game\'s rules, two players battle each other with Monster Cards trying to reduce the other Player\'s LifePoints to 0.',
-					imageURL: '/images/BasicYGO.jpg',
+					imageURL: '/local/BasicYGO.jpg',
 					links: [
 						{
 							type: 'gitHub',
@@ -23,7 +23,7 @@ class LayoutContainer extends Component {
 					name: 'HackerNews Search',
 					lang: 'ReactJS',
 					desc: 'Using the HackerNews API provided by https://news.ycombinator.com/, this application displays articles based on user provided keywords. Additional features include result sorting, infinite scrolling, and dismissing unwanted results.',
-					imageURL: '/images/hackernews.jpg',
+					imageURL: '/local/hackernews.jpg',
 					links: [
 						{
 							type: 'gitHub',
@@ -39,7 +39,7 @@ class LayoutContainer extends Component {
 					name: 'codeRyan',
 					lang: 'ReactJS, Redux',
 					desc: 'A web application based on the board game "Codenames". Words are pulled from a word bank and assigned to each team using a pseudo random number generator. Each team tries to guess all of their words before the other team.',
-					imageURL: '/images/codeRyan.jpg',
+					imageURL: '/local/codeRyan.jpg',
 					links: [
 						{
 							type: 'gitHub',

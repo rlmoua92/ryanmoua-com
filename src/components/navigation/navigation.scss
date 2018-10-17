@@ -5,11 +5,15 @@
 	height: 100%;
 	top: 0;
 	z-index: 1;
+	width: 10%;
+	align-items: flex-end;
 
 	&-item {
 		font-size: 1.5em;
-		border-top-left-radius: .25em;
-		border-bottom-left-radius: .25em;
+		//border-top-left-radius: .25em;
+		//border-bottom-left-radius: .25em;
+		width: 100%;
+		max-width: 100px;
 
 		button {
 			display: block;
@@ -38,12 +42,12 @@
 		}
 	}
 
-	&-item.active {
+	/*&-item.active {
 
 		button {
 			a {
 				padding-bottom: 3em;
 			}
 		}
-	}
+	}*/
 }

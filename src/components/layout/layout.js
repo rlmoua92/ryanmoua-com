@@ -29,7 +29,7 @@ const Layout = (props) => {
 					<Section sectionID="about-me">
 						<h2>About Me</h2>
 					</Section>
-					<Section bgURL="/images/circuit-fpo.jpg" />
+					<Section bgURL="/local/circuit-fpo.jpg" />
 					<Section sectionID="projects">
 						<h2>Projects</h2>
 						{/*<h3>Side Projects</h3>*/}
@@ -53,14 +53,14 @@ const Layout = (props) => {
 							}
 						</div>*/}
 					</Section>
-					<Section bgURL="/images/bball-fpo.jpg" />
+					<Section bgURL="/local/bball-fpo.jpg" />
 					{/*<SectionWithHidden currentContent={currentContent} sectionID="education">
 						<h2>Education</h2>
 					</SectionWithHidden>*/}
 					<Section sectionID="resume">
 						<h2>Resume</h2>
 					</Section>
-					<Section bgURL="/images/traction-fpo.jpg" />
+					<Section bgURL="/local/traction-fpo.jpg" />
 					<Section sectionID="contact">
 						<h2>Contact</h2>
 						<p>Have a question or just want to get in contact with me? Feel free to reach out via the form below: </p>

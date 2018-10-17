@@ -21,7 +21,7 @@ const Project = (props) => {
 				{
 					project.links.map(link => {
 						return (
-							<a key={link.type} href={link.linkTarget} target="_blank" rel="noopener noreferrer"><img src={link.type === "heroku" ? '/images/heroku-logo-stroke-purple.png' : '/images/GitHub-Mark-Dark-64px.png'} alt={link.type} /></a>
+							<a key={link.type} href={link.linkTarget} target="_blank" rel="noopener noreferrer"><img src={link.type === "heroku" ? '/local/heroku-logo-stroke-purple.png' : '/local/GitHub-Mark-Dark-64px.png'} alt={link.type} /></a>
 						);
 					})
 				}

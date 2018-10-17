@@ -50,37 +50,12 @@ class NavigationContainer extends Component {
 					'bgColor': '#FF9800',
 				},
 			],
-			positionLeft: window.innerWidth > 1200 ? ((window.innerWidth - 1200) / 2) : 0,
 		};
-
-		this.onWindowResize = this.onWindowResize.bind(this);
-	}
-
-	componentDidMount() {
-		window.addEventListener('resize', this.onWindowResize);
-	}
-
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.onWindowResize);
-	}
-
-	onWindowResize(e) {
-		const width = e.target.innerWidth;
-		if (width > 1200) {
-			this.setState({
-				positionLeft: (width - 1200) / 2,
-			});
-		} else {
-			this.setState({
-				positionLeft: 0,
-			});
-		}
 	}
 
 	render() {
 		const { 
 			navItems,
-			positionLeft,
 		} = this.state;
 		const { currentContent } = this.props;
 		return (
@@ -88,7 +63,6 @@ class NavigationContainer extends Component {
 				currentContent={currentContent}
 				navItems={navItems}
 				onNavigationClick={this.props.onNavigationClick} 
-				positionLeft={positionLeft}
 			/>
 		);
 	}
