@@ -8,11 +8,13 @@ const Section = (props) => {
 		children,
 	} = props;
 
+	console.log(bgURL);
+
 	return (
 		<div 
 			id={sectionID} 
 			className="section"
-			style={{ backgroundURL: bgURL}}
+			style={{ backgroundImage: 'url(' + bgURL + ')'}}
 		>
 			<div className="section-content">
 				{children}

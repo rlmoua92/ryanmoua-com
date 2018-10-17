@@ -20,7 +20,8 @@
 	}
 
 	.project-links {
-		align-items: center;
+		flex-grow: 1;
+		align-items: flex-end;
 		justify-content: center;
 
 		a {

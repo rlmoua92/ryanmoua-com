@@ -17,15 +17,15 @@ class NavigationContainer extends Component {
 				{
 					'linkID': 'about-me',
 					'linkIcon': faAddressCard,
+					'linkTarget': '#about-me',
 					'linkText': 'About',
-					'type': 'Navigation',
 					'bgColor': '#F44336',
 				},
 				{
 					'linkID': 'projects',
 					'linkIcon': faFileCode,
+					'linkTarget': '#projects',
 					'linkText': 'Projects',
-					'type': 'Navigation',
 					'bgColor': '#2196F3',
 				},
 				/*{
@@ -38,16 +38,15 @@ class NavigationContainer extends Component {
 				{
 					'linkID': 'resume',
 					'linkIcon': faFileAlt,
-					'linkTarget': '/resume.pdf',
+					'linkTarget': '#resume',
 					'linkText': 'Resume',
-					'type': 'Link',
 					'bgColor': '#4CAF50',
 				},
 				{
 					'linkID': 'contact',
 					'linkIcon': faEnvelope,
+					'linkTarget': '#contact',
 					'linkText': 'Contact',
-					'type': 'Navigation',
 					'bgColor': '#FF9800',
 				},
 			],

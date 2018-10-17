@@ -9,7 +9,7 @@ class BannerContainer extends Component {
 	}
 
 	onButtonClick() {
-		window.scrollTo(0, 25);
+		window.scrollTo(0, 10);
 	}
 
 	render() {

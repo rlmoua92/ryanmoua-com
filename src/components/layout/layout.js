@@ -4,10 +4,7 @@ import Section from '../section';
 import Navigation from '../navigation';
 import Project from '../project';
 import ContactForm from '../contactForm';
-import { withHidden } from '../../common.js';
 import './layout.scss';
-
-const SectionWithHidden = withHidden(Section);
 
 const Layout = (props) => {
 	const { 
@@ -20,7 +17,8 @@ const Layout = (props) => {
 	return (
 		<div>
 			<Banner isHidden={!isShowingBanner}>
-				<h1>Ryan Moua. Aspiring Front-end Developer.</h1>
+				<h1>Ryan Moua.</h1>
+				<h2>Aspiring Front-end Developer.</h2>
 			</Banner>
 			<div className="content">
 				<Navigation 
@@ -28,10 +26,11 @@ const Layout = (props) => {
 					onNavigationClick={onNavigationClick}
 				/>
 				<div>
-					<SectionWithHidden currentContent={currentContent} sectionID="about-me">
+					<Section sectionID="about-me">
 						<h2>About Me</h2>
-					</SectionWithHidden>
-					<SectionWithHidden currentContent={currentContent} sectionID="projects">
+					</Section>
+					<Section bgURL="/images/circuit-fpo.jpg" />
+					<Section sectionID="projects">
 						<h2>Projects</h2>
 						{/*<h3>Side Projects</h3>*/}
 						<div className="project-container flex flex-wrap">
@@ -53,18 +52,20 @@ const Layout = (props) => {
 								})
 							}
 						</div>*/}
-					</SectionWithHidden>
+					</Section>
+					<Section bgURL="/images/bball-fpo.jpg" />
 					{/*<SectionWithHidden currentContent={currentContent} sectionID="education">
 						<h2>Education</h2>
 					</SectionWithHidden>*/}
-					<SectionWithHidden currentContent={currentContent} sectionID="resume">
+					<Section sectionID="resume">
 						<h2>Resume</h2>
-					</SectionWithHidden>
-					<SectionWithHidden currentContent={currentContent} sectionID="contact">
+					</Section>
+					<Section bgURL="/images/traction-fpo.jpg" />
+					<Section sectionID="contact">
 						<h2>Contact</h2>
 						<p>Have a question or just want to get in contact with me? Feel free to reach out via the form below: </p>
 						<ContactForm />
-					</SectionWithHidden>
+					</Section>
 				</div>
 			</div>
 		</div>

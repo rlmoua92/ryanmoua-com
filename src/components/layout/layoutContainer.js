@@ -80,7 +80,7 @@ class LayoutContainer extends Component {
 
 	componentDidMount() {
 		this.setState({
-			isShowingBanner: window.scrollY < 25,
+			isShowingBanner: window.scrollY < 10,
 		});
 
 		window.addEventListener('scroll', this.onScroll);
@@ -92,12 +92,11 @@ class LayoutContainer extends Component {
 
 	onScroll() {
 		this.setState({
-			isShowingBanner: window.scrollY < 25,
+			isShowingBanner: window.scrollY < 10,
 		});
 	}
 
-	onNavigationClick(e, linkID) {
-		e.preventDefault();
+	onNavigationClick(linkID) {
 		this.setState({
 			currentContent: linkID
 		});

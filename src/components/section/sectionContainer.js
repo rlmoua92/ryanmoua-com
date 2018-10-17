@@ -6,7 +6,7 @@ class SectionContainer extends Component {
 		const {
 			sectionID,
 			children,
-			bgURL
+			bgURL,
 		} = this.props;
 		
 		return (

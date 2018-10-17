@@ -4,7 +4,7 @@ import './project.scss';
 const Project = (props) => {
 	const { project } = props;
 	return (
-		<div className="project text-center">
+		<div className="project text-center flex flex-column">
 			<div className="project-img">
 				{
 					project.links.length ?

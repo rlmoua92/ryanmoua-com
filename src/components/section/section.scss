@@ -1,12 +1,18 @@
 @import '../../common.scss';
 
 .section {
-	background-color: $section-bg-color;
+	background-color: #fff;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 2em 0;
 
 	&-content {
 		max-width: 1200px;
 		margin: 0 auto;
 		padding-left: 5em;
 		overflow: auto;
+		background-color: #fff;
 	}
 }

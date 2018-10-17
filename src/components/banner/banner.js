@@ -11,7 +11,7 @@ const Banner = (props) => {
 		onButtonClick,
 	} = props;
 
-	const bannerHeight = isHidden ? { height: '25px' } : { height: '100vh' };
+	const bannerHeight = isHidden ? { height: '10px' } : { height: '100vh' };
 
 	return (
 		<div className="banner flex space-around v-align-center" style={bannerHeight}>
