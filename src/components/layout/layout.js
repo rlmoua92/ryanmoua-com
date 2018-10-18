@@ -5,6 +5,10 @@ import Navigation from '../navigation';
 import Project from '../project';
 import ContactForm from '../contactForm';
 import { CSSTransition } from 'react-transition-group';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+	faChevronUp,
+} from '@fortawesome/free-solid-svg-icons';
 import './layout.scss';
 
 const Layout = (props) => {
@@ -13,6 +17,7 @@ const Layout = (props) => {
 		onNavigationClick,
 		sectionRefs,
 		isShowingBanner,
+		onBackToTopClick,
 	} = props;
 
 	return (
@@ -78,8 +83,14 @@ const Layout = (props) => {
 						<p>Have a question or just want to get in contact with me? Feel free to reach out via the form below: </p>
 						<ContactForm />
 					</Section>
-					<div className="footer">
-						© 2018 Ryan Moua
+					<div className="footer flex v-align-center">
+						<div className="copyright flex-33">© 2018 Ryan Moua</div>
+						<div className="footer-button flex-33 text-center">
+							<button onClick={onBackToTopClick}>
+								<FontAwesomeIcon icon={faChevronUp} />
+								<div className="button-text">Back to Top</div>
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>

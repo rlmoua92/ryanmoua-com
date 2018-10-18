@@ -82,6 +82,7 @@ class LayoutContainer extends Component {
 
 		this.onNavigationClick = this.onNavigationClick.bind(this);
 		this.onScroll = this.onScroll.bind(this);
+		this.onBackToTop = this.onBackToTop.bind(this);
 	}
 
 	componentDidMount() {
@@ -107,6 +108,10 @@ class LayoutContainer extends Component {
 		myDomNode.scrollIntoView();
 	}
 
+	onBackToTop() {
+		window.scrollTo(0,0);
+	}
+
 	render() {
 		const {
 			sideProjects,
@@ -120,6 +125,7 @@ class LayoutContainer extends Component {
 				onNavigationClick={this.onNavigationClick}
 				sectionRefs={sectionRefs}
 				isShowingBanner={isShowingBanner}
+				onBackToTopClick={this.onBackToTop}
 			/>
 		);
 	}
