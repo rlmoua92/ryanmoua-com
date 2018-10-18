@@ -2,7 +2,7 @@ $body-bg-color: #000;
 $text-color: #000;
 $link-color: #fff;
 $active-link-color: #2196f3;
-$section-bg-color: #FAFAFA;
+$section-bg-color: #78909C;
 
 $mobile-breakpoint: 320px;
 $tablet-breakpoint: 768px;
@@ -28,6 +28,10 @@ body {
 a:hover, button:hover {
 	opacity: .75;
 	cursor: pointer;
+}
+
+img {
+	max-width: 100%;
 }
 
 .flex {

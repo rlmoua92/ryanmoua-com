@@ -9,7 +9,7 @@ const Navigation = (props) => {
 	} = props;
 
 	return (
-		<div className="navigation flex flex-column text-center">
+		<div className="navigation flex text-center">
 			{
 				navItems.map(item => {
 					const className = "navigation-item" + (currentContent === item.linkID ? " active" : "");

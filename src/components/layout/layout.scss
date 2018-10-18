@@ -1,5 +1,12 @@
-@impot '../../common.scss';
+@import '../../common.scss';
 
 .content {
 	min-height: 100vh;
+	padding-bottom: 87px;
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+	.content {
+		padding-bottom: 0;
+	}
 }

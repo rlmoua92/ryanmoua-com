@@ -36,10 +36,10 @@ class NavigationContainer extends Component {
 					'bgColor': ,
 				},*/
 				{
-					'linkID': 'resume',
+					'linkID': 'experience',
 					'linkIcon': faFileAlt,
-					'linkTarget': '#resume',
-					'linkText': 'Resume',
+					'linkTarget': '#experience',
+					'linkText': 'Experience',
 					'bgColor': '#4CAF50',
 				},
 				{

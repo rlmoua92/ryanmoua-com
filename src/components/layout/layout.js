@@ -28,6 +28,17 @@ const Layout = (props) => {
 				<div>
 					<Section sectionID="about-me">
 						<h2>About Me</h2>
+						<div className="flex">
+							<div className="about-img flex-50">
+								<img src="/local/ryan-fpo.jpg" alt="Ryan Moua" />
+							</div>
+							<div className="about-content flex-50">
+								<ul>
+									<li>Born in San Diego, CA</li>
+									<li>Went to college at Universty of California Irvine</li>
+								</ul>
+							</div>
+						</div>
 					</Section>
 					<Section bgURL="/local/circuit-fpo.jpg" />
 					<Section sectionID="projects">
@@ -57,8 +68,10 @@ const Layout = (props) => {
 					{/*<SectionWithHidden currentContent={currentContent} sectionID="education">
 						<h2>Education</h2>
 					</SectionWithHidden>*/}
-					<Section sectionID="resume">
-						<h2>Resume</h2>
+					<Section sectionID="experience">
+						<h2>Experience</h2>
+						<div>For more information click the following button to see my resume</div>
+						<button><a href="/local/resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a></button>
 					</Section>
 					<Section bgURL="/local/traction-fpo.jpg" />
 					<Section sectionID="contact">

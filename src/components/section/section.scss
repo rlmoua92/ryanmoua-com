@@ -9,12 +9,20 @@
 	padding: 2em 0;
 
 	&-content {
-		width: 80%;
-		max-width: 1200px;
-		margin: 0 auto 0 10%;
 		padding: 1em 2em;
 		overflow: auto;
 		background-color: #fff;
 		box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+	}
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+	.section {
+	
+		&-content {
+			width: 80%;
+			max-width: 1200px;
+			margin: 0 auto 0 10%;
+		}
 	}
 }
