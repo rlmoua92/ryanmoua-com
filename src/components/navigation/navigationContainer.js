@@ -15,9 +15,9 @@ class NavigationContainer extends Component {
 		this.state = {
 			navItems: [
 				{
-					'linkID': 'about-me',
+					'linkID': 'about',
 					'linkIcon': faAddressCard,
-					'linkTarget': '#about-me',
+					'linkTarget': '#about',
 					'linkText': 'About',
 					'bgColor': '#F44336',
 				},
@@ -28,13 +28,6 @@ class NavigationContainer extends Component {
 					'linkText': 'Projects',
 					'bgColor': '#2196F3',
 				},
-				/*{
-					'linkID': 'education',
-					'linkIcon': faGraduationCap,
-					'linkText': 'Education',
-					'type': 'Navigation',
-					'bgColor': ,
-				},*/
 				{
 					'linkID': 'experience',
 					'linkIcon': faFileAlt,
@@ -57,12 +50,15 @@ class NavigationContainer extends Component {
 		const { 
 			navItems,
 		} = this.state;
-		const { currentContent } = this.props;
+		const { 
+			sectionRefs,
+		} = this.props;
+
 		return (
 			<Navigation 
-				currentContent={currentContent}
 				navItems={navItems}
 				onNavigationClick={this.props.onNavigationClick} 
+				sectionRefs={sectionRefs}
 			/>
 		);
 	}

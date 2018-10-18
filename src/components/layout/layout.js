@@ -9,11 +9,11 @@ import './layout.scss';
 const Layout = (props) => {
 	const { 
 		sideProjects,
-		//schoolProjects,
 		onNavigationClick,
-		currentContent,
 		isShowingBanner,
+		sectionRefs,
 	} = props;
+
 	return (
 		<div>
 			<Banner isHidden={!isShowingBanner}>
@@ -22,11 +22,11 @@ const Layout = (props) => {
 			</Banner>
 			<div className="content">
 				<Navigation 
-					currentContent={currentContent}
 					onNavigationClick={onNavigationClick}
+					sectionRefs={sectionRefs}
 				/>
 				<div>
-					<Section sectionID="about-me">
+					<Section ref={sectionRefs.about}>
 						<h2>About Me</h2>
 						<div className="flex">
 							<div className="about-img flex-50">
@@ -41,9 +41,8 @@ const Layout = (props) => {
 						</div>
 					</Section>
 					<Section bgURL="/local/circuit-fpo.jpg" />
-					<Section sectionID="projects">
+					<Section ref={sectionRefs.projects}>
 						<h2>Projects</h2>
-						{/*<h3>Side Projects</h3>*/}
 						<div className="project-container flex flex-wrap">
 							{
 								sideProjects.map(project => {
@@ -53,32 +52,22 @@ const Layout = (props) => {
 								})
 							}
 						</div>
-						{/*<h3>School Projects</h3>
-						<div className="project-container flex flex-wrap">
-							{
-								schoolProjects.map(project => {
-									return(
-										<Project project={project} key={project.name} />
-									);
-								})
-							}
-						</div>*/}
 					</Section>
 					<Section bgURL="/local/bball-fpo.jpg" />
-					{/*<SectionWithHidden currentContent={currentContent} sectionID="education">
-						<h2>Education</h2>
-					</SectionWithHidden>*/}
-					<Section sectionID="experience">
+					<Section ref={sectionRefs.experience}>
 						<h2>Experience</h2>
 						<div>For more information click the following button to see my resume.</div>
 						<button><a href="/local/resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a></button>
 					</Section>
 					<Section bgURL="/local/traction-fpo.jpg" />
-					<Section sectionID="contact">
+					<Section ref={sectionRefs.contact}>
 						<h2>Contact</h2>
 						<p>Have a question or just want to get in contact with me? Feel free to reach out via the form below: </p>
 						<ContactForm />
 					</Section>
+					<div className="footer">
+						© 2018 Ryan Moua
+					</div>
 				</div>
 			</div>
 		</div>

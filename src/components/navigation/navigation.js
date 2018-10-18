@@ -5,21 +5,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Navigation = (props) => {
 	const {
 		navItems,
-		currentContent,
+		sectionRefs,
 	} = props;
 
 	return (
 		<div className="navigation flex text-center">
 			{
 				navItems.map(item => {
-					const className = "navigation-item" + (currentContent === item.linkID ? " active" : "");
 					return (
-						<div className={className} style={{backgroundColor: item.bgColor}} key={item.linkID}>
-							<button onClick={() => props.onNavigationClick(item.linkID)}>
-								<a href={item.linkTarget}>
-									<FontAwesomeIcon icon={item.linkIcon} />
-									<div className="navigation-text">{item.linkText}</div>
-								</a>
+						<div className="navigation-item" style={{backgroundColor: item.bgColor}} key={item.linkID}>
+							<button onClick={() => props.onNavigationClick(item.linkID, sectionRefs[item.linkID])}>
+								<FontAwesomeIcon icon={item.linkIcon} />
+								<div className="navigation-text">{item.linkText}</div>
 							</button>
 						</div>
 					)

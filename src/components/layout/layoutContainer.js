@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import Layout from './layout.js';
 
 class LayoutContainer extends Component {
@@ -70,8 +71,13 @@ class LayoutContainer extends Component {
 					]
 				}
 			],*/
-			currentContent: 'about-me',
 			isShowingBanner: true,
+			sectionRefs: {
+				about: React.createRef(),
+				projects: React.createRef(),
+				experience: React.createRef(),
+				contact: React.createRef(),
+			}
 		}
 
 		this.onScroll = this.onScroll.bind(this);
@@ -96,27 +102,25 @@ class LayoutContainer extends Component {
 		});
 	}
 
-	onNavigationClick(linkID) {
-		this.setState({
-			currentContent: linkID
-		});
+	onNavigationClick(linkID, sectionRef) {
+
+		const myDomNode = ReactDOM.findDOMNode(sectionRef.current)
+		myDomNode.scrollIntoView();
 	}
 
 	render() {
 		const {
 			sideProjects,
-//			schoolProjects,
-			currentContent,
 			isShowingBanner,
+			sectionRefs,
 		} = this.state;
 
 		return (
 			<Layout 
 				sideProjects={sideProjects} 
-//				schoolProjects={schoolProjects} 
 				onNavigationClick={this.onNavigationClick}
-				currentContent={currentContent}
 				isShowingBanner={isShowingBanner}
+				sectionRefs={sectionRefs}
 			/>
 		);
 	}

@@ -3,14 +3,12 @@ import './section.scss';
 
 const Section = (props) => {
 	const {
-		sectionID,
 		bgURL,
 		children,
 	} = props;
 
 	return (
 		<div 
-			id={sectionID} 
 			className="section"
 			style={{ backgroundImage: 'url(' + bgURL + ')'}}
 		>
