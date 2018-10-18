@@ -71,7 +71,6 @@ class LayoutContainer extends Component {
 					]
 				}
 			],*/
-			isShowingBanner: true,
 			sectionRefs: {
 				about: React.createRef(),
 				projects: React.createRef(),
@@ -80,26 +79,7 @@ class LayoutContainer extends Component {
 			}
 		}
 
-		this.onScroll = this.onScroll.bind(this);
 		this.onNavigationClick = this.onNavigationClick.bind(this);
-	}
-
-	componentDidMount() {
-		this.setState({
-			isShowingBanner: window.scrollY < 10,
-		});
-
-		window.addEventListener('scroll', this.onScroll);
-	}
-
-	componentWillUnmount() {
-		window.removeEventListener('scroll', this.onScroll);
-	}
-
-	onScroll() {
-		this.setState({
-			isShowingBanner: window.scrollY < 10,
-		});
 	}
 
 	onNavigationClick(linkID, sectionRef) {
@@ -111,7 +91,6 @@ class LayoutContainer extends Component {
 	render() {
 		const {
 			sideProjects,
-			isShowingBanner,
 			sectionRefs,
 		} = this.state;
 
@@ -119,7 +98,6 @@ class LayoutContainer extends Component {
 			<Layout 
 				sideProjects={sideProjects} 
 				onNavigationClick={this.onNavigationClick}
-				isShowingBanner={isShowingBanner}
 				sectionRefs={sectionRefs}
 			/>
 		);

@@ -10,13 +10,12 @@ const Layout = (props) => {
 	const { 
 		sideProjects,
 		onNavigationClick,
-		isShowingBanner,
 		sectionRefs,
 	} = props;
 
 	return (
 		<div>
-			<Banner isHidden={!isShowingBanner}>
+			<Banner>
 				<h1>Ryan Moua.</h1>
 				<h2>Aspiring Front-end Developer.</h2>
 			</Banner>
