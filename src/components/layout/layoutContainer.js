@@ -86,9 +86,6 @@ class LayoutContainer extends Component {
 	}
 
 	componentDidMount() {
-		this.setState({
-			isShowingBanner: window.scrollY < 10,
-		});
 		window.addEventListener('scroll', this.onScroll);
 	}
 
@@ -102,8 +99,7 @@ class LayoutContainer extends Component {
 		});
 	}
 
-	onNavigationClick(linkID, sectionRef) {
-
+	onNavigationClick(sectionRef) {
 		const myDomNode = ReactDOM.findDOMNode(sectionRef.current)
 		myDomNode.scrollIntoView();
 	}

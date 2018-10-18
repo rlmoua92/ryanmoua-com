@@ -14,7 +14,7 @@ const Navigation = (props) => {
 				navItems.map(item => {
 					return (
 						<div className="navigation-item" style={{backgroundColor: item.bgColor}} key={item.linkID}>
-							<button onClick={() => props.onNavigationClick(item.linkID, sectionRefs[item.linkID])}>
+							<button onClick={() => props.onNavigationClick(sectionRefs[item.linkID])}>
 								<FontAwesomeIcon icon={item.linkIcon} />
 								<div className="navigation-text">{item.linkText}</div>
 							</button>
