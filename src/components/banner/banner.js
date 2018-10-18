@@ -7,14 +7,11 @@ import './banner.scss';
 
 const Banner = (props) => {
 	const {
-		isHidden,
 		onButtonClick,
 	} = props;
 
-	const bannerHeight = isHidden ? { height: '10px' } : { height: '100vh' };
-
 	return (
-		<div className="banner flex space-around v-align-center" style={bannerHeight}>
+		<div className="banner flex space-around v-align-center">
 			<div className="banner-content text-center">
 				{props.children}
 				<button className="banner-button" onClick={onButtonClick}>

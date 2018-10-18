@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Banner from './banner.js';
+import { CSSTransition } from 'react-transition-group';
 
 class BannerContainer extends Component {
 	constructor(props) {
@@ -39,12 +40,17 @@ class BannerContainer extends Component {
 			isShowingBanner,
 		} = this.state;
 		return (
-			<Banner 
-				isHidden={!isShowingBanner}
-				onButtonClick={this.onButtonClick}
+			<CSSTransition
+				in={isShowingBanner}
+				timeout={500}
+				classNames="slide"
 			>
-				{this.props.children}
-			</Banner>
+				<Banner 
+					onButtonClick={this.onButtonClick}
+				>
+					{this.props.children}
+				</Banner>
+			</CSSTransition>
 		);
 	}
 }

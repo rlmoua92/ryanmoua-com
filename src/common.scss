@@ -94,3 +94,25 @@ a:hover, button:hover {
 .w-100 {
 	width: 100%;
 }
+
+.slide-enter {
+	height: 10px;
+}
+.slide-enter-active {
+	height: 100vh;
+	transition: all 500ms ease-out;
+}
+.slide-enter-done {
+	height: 100vh;
+}
+
+.slide-exit {
+	height: 100vh;
+}
+.slide-exit-active {
+	height: 10px;
+	transition: all 500ms ease-out;
+}
+.slide-exit-done {
+	height: 10px;
+}
