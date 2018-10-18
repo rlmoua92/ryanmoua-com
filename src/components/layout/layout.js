@@ -4,6 +4,7 @@ import Section from '../section';
 import Navigation from '../navigation';
 import Project from '../project';
 import ContactForm from '../contactForm';
+import { CSSTransition } from 'react-transition-group';
 import './layout.scss';
 
 const Layout = (props) => {
@@ -11,21 +12,34 @@ const Layout = (props) => {
 		sideProjects,
 		onNavigationClick,
 		sectionRefs,
+		isShowingBanner,
 	} = props;
 
 	return (
 		<div>
-			<Banner>
-				<h1>Ryan Moua.</h1>
-				<h2>Aspiring Front-end Developer.</h2>
-			</Banner>
+			<CSSTransition
+				in={isShowingBanner}
+				timeout={500}
+				classNames="slide"
+			>
+				<Banner>
+					<h1>Ryan Moua.</h1>
+					<h2>Aspiring Front-end Developer.</h2>
+				</Banner>
+			</CSSTransition>
 			<div className="content">
-				<Navigation 
-					onNavigationClick={onNavigationClick}
-					sectionRefs={sectionRefs}
-				/>
+				<CSSTransition
+					in={!isShowingBanner}
+					timeout={1000}
+					classNames="fade"
+				>
+					<Navigation 
+						onNavigationClick={onNavigationClick}
+						sectionRefs={sectionRefs}
+					/>
+				</CSSTransition>
 				<div>
-					<Section ref={sectionRefs.about}>
+					<Section ref={sectionRefs.about} transitionIn={!isShowingBanner}>
 						<h2>About Me</h2>
 						<div className="flex">
 							<div className="about-img flex-50">
@@ -40,7 +54,7 @@ const Layout = (props) => {
 						</div>
 					</Section>
 					<Section bgURL="/local/circuit-fpo.jpg" />
-					<Section ref={sectionRefs.projects}>
+					<Section ref={sectionRefs.projects} transitionIn={!isShowingBanner}>
 						<h2>Projects</h2>
 						<div className="project-container flex flex-wrap">
 							{
@@ -53,13 +67,13 @@ const Layout = (props) => {
 						</div>
 					</Section>
 					<Section bgURL="/local/bball-fpo.jpg" />
-					<Section ref={sectionRefs.experience}>
+					<Section ref={sectionRefs.experience} transitionIn={!isShowingBanner}>
 						<h2>Experience</h2>
 						<div>For more information click the following button to see my resume.</div>
 						<button><a href="/local/resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a></button>
 					</Section>
 					<Section bgURL="/local/traction-fpo.jpg" />
-					<Section ref={sectionRefs.contact}>
+					<Section ref={sectionRefs.contact} transitionIn={!isShowingBanner}>
 						<h2>Contact</h2>
 						<p>Have a question or just want to get in contact with me? Feel free to reach out via the form below: </p>
 						<ContactForm />

@@ -6,10 +6,11 @@ class SectionContainer extends Component {
 		const {
 			children,
 			bgURL,
+			transitionIn,
 		} = this.props;
 		
 		return (
-			<Section bgURL={bgURL}>{children}</Section>
+			<Section bgURL={bgURL} transitionIn={transitionIn}>{children}</Section>
 		);
 	}
 }

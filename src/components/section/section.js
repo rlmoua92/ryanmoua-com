@@ -1,9 +1,11 @@
 import React from 'react';
+import { CSSTransition } from 'react-transition-group';
 import './section.scss';
 
 const Section = (props) => {
 	const {
 		bgURL,
+		transitionIn,
 		children,
 	} = props;
 
@@ -14,7 +16,15 @@ const Section = (props) => {
 		>
 			{children ?
 				<div className="section-content">
-					{children}
+					<CSSTransition
+						in={transitionIn}
+						timeout={1000}
+						classNames="fade"
+					>
+						<div>
+							{children}
+						</div>
+					</CSSTransition>
 				</div> :
 				null
 			}
