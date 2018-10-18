@@ -78,6 +78,7 @@ class LayoutContainer extends Component {
 				contact: React.createRef(),
 			},
 			isShowingBanner: true,
+			scrollLock: true,
 		}
 
 		this.onNavigationClick = this.onNavigationClick.bind(this);
@@ -94,9 +95,15 @@ class LayoutContainer extends Component {
 	}
 
 	onScroll() {
-		this.setState({
-			isShowingBanner: window.scrollY < 10,
-		});
+		if (this.state.scrollLock) {
+			this.setState({
+				scrollLock: false
+			});
+		} else {
+			this.setState({
+				isShowingBanner: window.scrollY < 10,
+			});
+		}
 	}
 
 	onNavigationClick(sectionRef) {

@@ -18,7 +18,7 @@ const Section = (props) => {
 				<div className="section-content">
 					<CSSTransition
 						in={transitionIn}
-						timeout={1000}
+						timeout={750}
 						classNames="fade"
 					>
 						<div>

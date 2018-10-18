@@ -2,6 +2,7 @@
 
 .banner {
 	background-image: url(/local/sd-fpo.jpg);
+	background-color: #000;
 	background-size: cover;
 	background-position: center center;
 	color: #fff;
@@ -9,6 +10,10 @@
 	position: relative;
 	z-index: 2;
 	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 
 	&-content {
 		overflow: auto;

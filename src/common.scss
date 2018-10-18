@@ -1,4 +1,4 @@
-$body-bg-color: #78909C;
+$body-bg-color: #000;
 $text-color: #000;
 $link-color: #fff;
 $active-link-color: #2196f3;
@@ -96,22 +96,37 @@ a:hover, button:hover {
 }
 
 .slide-enter {
+	top: -10px;
 	height: 10px;
 }
 .slide-enter-active {
+	top: 0;
 	height: 100vh;
 	transition: all 500ms ease-out;
 }
-
 .slide-exit {
+	top: 0;
 	height: 100vh;
 }
 .slide-exit-active {
+	top: -10px;
 	height: 10px;
 	transition: all 500ms ease-in;
 }
 .slide-exit-done {
+	top: -10px;
 	height: 10px;
+}
+
+.slide-appear {
+	height: 10px;
+}
+.slide-appear-active {
+	height: 100vh;
+	transition: all 500ms ease-out;
+}
+.slide-appear-done {
+
 }
 
 .fade-enter {
@@ -121,7 +136,7 @@ a:hover, button:hover {
 .fade-enter-active {
 	opacity: 100;
 	transform: scale(1);
-	transition: all 500ms ease-in 500ms;
+	transition: all 250ms ease-in 500ms;
 }
 .fade-enter-done {
 	opacity: 100;
@@ -131,7 +146,7 @@ a:hover, button:hover {
 }
 .fade-exit-active {
 	opacity: 0;
-	transition: all 500ms ease-out;
+	transition: all 250ms ease-out;
 }
 .fade-exit-done {
 	opacity: 0;

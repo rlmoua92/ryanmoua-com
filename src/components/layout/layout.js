@@ -35,7 +35,7 @@ const Layout = (props) => {
 			<div className="content">
 				<CSSTransition
 					in={!isShowingBanner}
-					timeout={1000}
+					timeout={750}
 					classNames="fade"
 				>
 					<Navigation 
