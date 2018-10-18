@@ -70,7 +70,7 @@ const Layout = (props) => {
 					</SectionWithHidden>*/}
 					<Section sectionID="experience">
 						<h2>Experience</h2>
-						<div>For more information click the following button to see my resume</div>
+						<div>For more information click the following button to see my resume.</div>
 						<button><a href="/local/resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a></button>
 					</Section>
 					<Section bgURL="/local/traction-fpo.jpg" />
