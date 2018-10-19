@@ -108,11 +108,11 @@ class LayoutContainer extends Component {
 
 	onNavigationClick(sectionRef) {
 		const myDomNode = ReactDOM.findDOMNode(sectionRef.current)
-		myDomNode.scrollIntoView();
+		window.scrollTo(0, myDomNode.offsetTop);
 	}
 
 	onBackToTop() {
-		window.scrollTo(0,0);
+		window.scrollTo(0, 0);
 	}
 
 	render() {
