@@ -45,7 +45,7 @@ const Layout = (props) => {
 				</CSSTransition>
 				<div>
 					<Section ref={sectionRefs.about} transitionIn={!isShowingBanner}>
-						<h2>About Me</h2>
+						<h2>About</h2>
 						<div className="flex">
 							<div className="about-img flex-50">
 								<img src="/local/ryan-fpo.jpg" alt="Ryan Moua" />
