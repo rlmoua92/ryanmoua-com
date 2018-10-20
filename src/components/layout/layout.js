@@ -75,7 +75,7 @@ const Layout = (props) => {
 					<Section ref={sectionRefs.experience} transitionIn={!isShowingBanner}>
 						<h2>Experience</h2>
 						<div>For more information click the following button to see my resume.</div>
-						<button><a href="/local/resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a></button>
+						<button><a href="/local/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></button>
 					</Section>
 					<Section bgURL="/local/traction-fpo.jpg" />
 					<Section ref={sectionRefs.contact} transitionIn={!isShowingBanner}>
