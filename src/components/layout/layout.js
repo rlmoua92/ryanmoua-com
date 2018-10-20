@@ -3,12 +3,17 @@ import Banner from '../banner';
 import Section from '../section';
 import Navigation from '../navigation';
 import Project from '../project';
-import ContactForm from '../contactForm';
+import ContactIcon from '../contactIcon';
 import { CSSTransition } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
 	faChevronUp,
+	faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
+import {
+	faLinkedin,
+	faGithub,
+} from '@fortawesome/free-brands-svg-icons';
 import './layout.scss';
 
 const Layout = (props) => {
@@ -80,8 +85,23 @@ const Layout = (props) => {
 					<Section bgURL="/local/traction-fpo.jpg" />
 					<Section ref={sectionRefs.contact} transitionIn={!isShowingBanner}>
 						<h2>Contact</h2>
-						<p>Have a question or just want to get in contact with me? Feel free to reach out via the form below: </p>
-						<ContactForm />
+						<p>Have a question or just want to get in contact with me? Feel free to reach out via one of the methods below: </p>
+						<div className="flex">
+							<ContactIcon 
+								icon={faEnvelope}
+								link="mailto:rlmoua92@gmail.com"
+							/>
+							<ContactIcon 
+								icon={faLinkedin}
+								link="https://www.linkedin.com/in/ryan-moua/"
+								newTab={true}
+							/>
+							<ContactIcon 
+								icon={faGithub}
+								link="https://github.com/rlmoua92/"
+								newTab={true}
+							/>
+						</div>
 					</Section>
 					<div className="footer flex v-align-center">
 						<div className="copyright flex-33">© 2018 Ryan Moua</div>
