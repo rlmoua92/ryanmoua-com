@@ -78,32 +78,31 @@ class LayoutContainer extends Component {
 				contact: React.createRef(),
 			},
 			isShowingBanner: true,
-			scrollLock: true,
 		}
 
 		this.onNavigationClick = this.onNavigationClick.bind(this);
+		this.onLoad = this.onLoad.bind(this);
 		this.onScroll = this.onScroll.bind(this);
 		this.onBackToTop = this.onBackToTop.bind(this);
 	}
 
 	componentDidMount() {
-		window.addEventListener('scroll', this.onScroll);
+		window.addEventListener('load', this.onLoad);
 	}
 
 	componentWillUnmount() {
 		window.removeEventListener('scroll', this.onScroll);
+		window.removeEventListener('load', this.onLoad);
+	}
+
+	onLoad() {
+		window.addEventListener('scroll', this.onScroll);
 	}
 
 	onScroll() {
-		if (this.state.scrollLock) {
-			this.setState({
-				scrollLock: false
-			});
-		} else {
-			this.setState({
-				isShowingBanner: window.scrollY < 10,
-			});
-		}
+		this.setState({
+			isShowingBanner: window.scrollY < 10,
+		});
 	}
 
 	onNavigationClick(sectionRef) {
