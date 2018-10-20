@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Layout from './layout.js';
+import { smoothScroll } from '../../common.js';
 
 class LayoutContainer extends Component {
 	constructor(props) {
@@ -106,12 +107,12 @@ class LayoutContainer extends Component {
 	}
 
 	onNavigationClick(sectionRef) {
-		const myDomNode = ReactDOM.findDOMNode(sectionRef.current)
-		window.scrollTo(0, myDomNode.offsetTop);
+		const myDomNode = ReactDOM.findDOMNode(sectionRef.current);
+		smoothScroll(myDomNode.offsetTop);
 	}
 
 	onBackToTop() {
-		window.scrollTo(0, 0);
+		smoothScroll(0);
 	}
 
 	render() {

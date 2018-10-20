@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Banner from './banner.js';
+import { smoothScroll } from '../../common.js';
 
 class BannerContainer extends Component {
 	constructor(props) {
@@ -9,7 +10,7 @@ class BannerContainer extends Component {
 	}
 
 	onButtonClick() {
-		window.scrollTo(0, 10);
+		smoothScroll(10);
 	}
 
 	render() {
