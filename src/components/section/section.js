@@ -5,6 +5,7 @@ import './section.scss';
 const Section = (props) => {
 	const {
 		bgURL,
+		bgColor,
 		transitionIn,
 		children,
 	} = props;
@@ -12,7 +13,7 @@ const Section = (props) => {
 	return (
 		<div 
 			className="section"
-			style={{ backgroundImage: 'url(' + bgURL + ')'}}
+			style={{ backgroundImage: 'url(' + bgURL + ')', backgroundColor: bgColor }}
 		>
 			{children ?
 				<div className="section-content">

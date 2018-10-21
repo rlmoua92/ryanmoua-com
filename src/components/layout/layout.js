@@ -71,7 +71,7 @@ const Layout = (props) => {
 							</div>
 						</div>
 					</Section>
-					<Section bgURL="/local/circuit-fpo.jpg" />
+					<Section bgColor="#000" />
 					<Section ref={sectionRefs.projects} transitionIn={!isShowingBanner}>
 						<h2>Projects</h2>
 						<div className="project-container flex flex-wrap">
@@ -84,7 +84,7 @@ const Layout = (props) => {
 							}
 						</div>
 					</Section>
-					<Section bgURL="/local/bball-fpo.jpg" />
+					<Section bgColor="#000" />
 					<Section ref={sectionRefs.experience} transitionIn={!isShowingBanner}>
 						<h2>Experience</h2>
 						<div className="flex flex-wrap experience-content">
@@ -118,7 +118,7 @@ const Layout = (props) => {
 						<div>For more information click the following button to view my résumé.</div>
 						<button><a href="/local/resume.pdf" target="_blank" rel="noopener noreferrer">View Résumé</a></button>
 					</Section>
-					<Section bgURL="/local/traction-fpo.jpg" />
+					<Section bgColor="#000" />
 					<Section ref={sectionRefs.contact} transitionIn={!isShowingBanner}>
 						<h2>Contact</h2>
 						<p>Have a question or just want to get in contact? Feel free to reach out via one of the methods below: </p>
