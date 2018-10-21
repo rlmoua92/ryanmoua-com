@@ -4,11 +4,15 @@ import Section from '../section';
 import Navigation from '../navigation';
 import Project from '../project';
 import ContactIcon from '../contactIcon';
+import IconHeader from '../iconHeader';
 import { CSSTransition } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
 	faChevronUp,
 	faEnvelope,
+	faAward,
+	faBuilding,
+	faCode,
 } from '@fortawesome/free-solid-svg-icons';
 import {
 	faLinkedin,
@@ -83,38 +87,36 @@ const Layout = (props) => {
 					<Section bgURL="/local/bball-fpo.jpg" />
 					<Section ref={sectionRefs.experience} transitionIn={!isShowingBanner}>
 						<h2>Experience</h2>
-						<div>
-							<h3>Jazel Auto</h3>
-							<div>
-								<em>September 2015 – August 2018</em>
+						<div className="flex flex-wrap experience-content">
+							<div className="experience-left">
+								<IconHeader icon={faBuilding}>Employment</IconHeader>
+								<ul>
+									<li>Jazel Auto - Product Team, SysOps (September 2015 - August 2018)</li>
+								</ul>
+								<IconHeader icon={faAward}>Achievements</IconHeader>
+								<ul>
+									<li>Jazel Auto - 2016 Rockstar of the Year (3rd Place)</li>
+									<li>Jazel Auto - 2017 Rockstar of the Year (1st Place)</li>
+								</ul>
 							</div>
-							<div>
-								<strong>Product Team</strong>
+							<div className="experience-right">
+								<IconHeader icon={faCode}>Technologies</IconHeader>
+									<ul className="flex flex-column flex-wrap">
+										<li>HTML</li>
+										<li>CSS</li>
+										<li>Javascript</li>
+										<li>ReactJS</li>
+										<li>Python</li>
+										<li>Git</li>
+										<li>Bash</li>
+										<li>AWS</li>
+										<li>WordPress</li>
+										<li>Photoshop</li>
+									</ul>
 							</div>
-							<ul>
-								<li>Assisted in building and launching responsive websites from PSDs using the custom Jazel content management system, based off of WordPress</li>
-								<li>Collaborated with developers to ensure understanding of product feature requests and tested new features for issues before deployment</li>
-								<li>Tested and added 3rd party Wordpress plugins to sites, editing plugin code and functionality to better suit company needs when necessary</li>
-								<li>Used experience with HTML, CSS, and Jazel product to provide technical support and to help fill in and document gaps of knowledge for customer facing employees</li>
-							</ul>
-							<div>
-								<strong>SysOps</strong>
-							</div>
-							<ul>
-								<li>Responsible for managing DNS records for more than 150 client domains using AWS Route 53</li>
-								<li>Monitored and maintained Jazel applications running on AWS EC2 apache servers</li>
-								<li>Responded to and diagnosed server and product failures, then implemented workflow and safeguards to avoid similar failures in the future</li>
-							</ul>
-							<div>
-								<strong>Accomplishments</strong>
-							</div>
-							<ul>
-								<li>2016. - Rockstar of the Year (3rd Place)</li>
-								<li>2017 - Rockstar of the Year (1st Place)</li>
-							</ul>
 						</div>
-						<div>For more information click the following button to see my resume.</div>
-						<button><a href="/local/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></button>
+						<div>For more information click the following button to view my résumé.</div>
+						<button><a href="/local/resume.pdf" target="_blank" rel="noopener noreferrer">View Résumé</a></button>
 					</Section>
 					<Section bgURL="/local/traction-fpo.jpg" />
 					<Section ref={sectionRefs.contact} transitionIn={!isShowingBanner}>

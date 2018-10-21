@@ -5,7 +5,8 @@ $link-color: #fff;
 $active-link-color: #2196f3;
 $section-bg-color: #78909C;
 $section-container-bg-color: #fafafa;
-$button-bg-color: #fff;
+$button-bg-color: transparent;
+$button-border-color: #9E9E9E;
 $button-text-color: #000;
 
 $mobile-breakpoint: 320px;
@@ -40,11 +41,12 @@ img {
 button {
 	font-size: 1em;
 	padding: .5em 1.5em;
-	margin-top: 2em;
-	margin-bottom: 2em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 	border-radius: .25em;
 	text-transform: uppercase;
 	background-color: $button-bg-color;
+	border: 1px solid $button-border-color;
 
 	a {
 		text-decoration: none;

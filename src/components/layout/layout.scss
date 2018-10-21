@@ -13,6 +13,26 @@
 	flex-basis: 100%;
 }
 
+.experience-left {
+	flex-basis: 100%;
+}
+.experience-right {
+	flex-basis: 100%;
+
+	ul {
+		max-height: 100px;
+	}
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+	.experience-left {
+		flex-basis: 50%;
+	}
+	.experience-right {
+		flex-basis: 50%;
+	}	
+}
+
 .footer {
 	padding: .5em 1em;
 	color: #fff;
