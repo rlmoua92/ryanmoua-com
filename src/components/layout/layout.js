@@ -84,7 +84,7 @@ const Layout = (props) => {
 					<Section ref={sectionRefs.experience} transitionIn={!isShowingBanner}>
 						<h2>Experience</h2>
 						<div>
-							<h3>Jazel</h3>
+							<h3>Jazel Auto</h3>
 							<div>
 								<em>September 2015 – August 2018</em>
 							</div>

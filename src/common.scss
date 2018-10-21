@@ -3,6 +3,8 @@ $text-color: #000;
 $link-color: #fff;
 $active-link-color: #2196f3;
 $section-bg-color: #78909C;
+$button-bg-color: #fff;
+$button-text-color: #000;
 
 $mobile-breakpoint: 320px;
 $tablet-breakpoint: 768px;
@@ -39,10 +41,12 @@ button {
 	margin-top: 2em;
 	margin-bottom: 2em;
 	border-radius: .25em;
+	text-transform: uppercase;
+	background-color: $button-bg-color;
 
 	a {
 		text-decoration: none;
-		color: $text-color;
+		color: $button-text-color;
 	}
 }
 
