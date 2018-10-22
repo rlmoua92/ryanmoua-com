@@ -58,7 +58,7 @@ const Layout = (props) => {
 						<div className="flex flex-wrap v-align-center">
 							<div className="about-img text-center">
 								<img src="/local/ryan.png" alt="Ryan Moua" />
-								<div className="about-img-quote text-center"><em>"I like playing basketball, making low-budget travel videos, and buying too many sneakers." - Ryan</em></div>
+								<div className="about-img-quote text-center"><em>"I like playing basketball, making low-budget travel videos, and buying too many sneakers." - Ryan (probably)</em></div>
 							</div>
 							<div className="about-content">
 								<p>Like most kids nowadays, a lot of my childhood was spent in front of a computer. From playing endless hours of video games online, to tweaking my Myspace template till it was just right, to making ridiculous photo edits of my friends on Photoshop, I dabbled in almost everything my computer could offer.</p>
