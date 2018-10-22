@@ -4,7 +4,7 @@ import './project.scss';
 const Project = (props) => {
 	const { project } = props;
 	return (
-		<div className="project text-center">
+		<div className="project text-center flex flex-column">
 			<div className="project-img">
 				{
 					project.links.length ?
@@ -21,7 +21,7 @@ const Project = (props) => {
 				{
 					project.links.map(link => {
 						return (
-							<a key={link.type} href={link.linkTarget} target="_blank" rel="noopener noreferrer"><img src={link.type === "heroku" ? '/images/heroku-logo-stroke-purple.png' : '/images/GitHub-Mark-Dark-64px.png'} alt={link.type} /></a>
+							<a key={link.type} href={link.linkTarget} target="_blank" rel="noopener noreferrer"><img src={link.type === "heroku" ? '/local/heroku-logo-stroke-purple.png' : '/local/GitHub-Mark-Dark-64px.png'} alt={link.type} /></a>
 						);
 					})
 				}

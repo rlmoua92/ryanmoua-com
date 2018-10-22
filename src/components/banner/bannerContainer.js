@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Banner from './banner.js';
+import { smoothScroll } from '../../common.js';
 
 class BannerContainer extends Component {
 	constructor(props) {
@@ -9,16 +10,16 @@ class BannerContainer extends Component {
 	}
 
 	onButtonClick() {
-		window.scrollTo(0, 25);
+		if (window.scrollY !== 10) {
+			smoothScroll(10);
+		} else {
+			smoothScroll(11);
+		}
 	}
 
 	render() {
-		const {
-			isHidden
-		} = this.props;
 		return (
 			<Banner 
-				isHidden={isHidden}
 				onButtonClick={this.onButtonClick}
 			>
 				{this.props.children}

@@ -1,22 +1,34 @@
 import React from 'react';
+import { CSSTransition } from 'react-transition-group';
 import './section.scss';
 
 const Section = (props) => {
 	const {
-		sectionID,
 		bgURL,
+		bgColor,
+		transitionIn,
 		children,
 	} = props;
 
 	return (
 		<div 
-			id={sectionID} 
 			className="section"
-			style={{ backgroundURL: bgURL}}
+			style={{ backgroundImage: 'url(' + bgURL + ')', backgroundColor: bgColor }}
 		>
-			<div className="section-content">
-				{children}
-			</div>
+			{children ?
+				<div className="section-content">
+					<CSSTransition
+						in={transitionIn}
+						timeout={750}
+						classNames="fade"
+					>
+						<div>
+							{children}
+						</div>
+					</CSSTransition>
+				</div> :
+				null
+			}
 		</div>
 	);
 };

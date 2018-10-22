@@ -1,15 +1,52 @@
 @import '../../common.scss';
 
 .banner {
-	background-image: url(http://blog.brianfancherphotography.com/wp-content/uploads/2011/03/San-Diego-110320-107.jpg);
+	background-image: url(/local/banner.jpg);
+	background-color: #000;
 	background-size: cover;
 	background-position: center center;
-	color: #fff;
+	color: $reverse-text-color;
 	overflow: hidden;
 	position: relative;
 	z-index: 2;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 
 	&-content {
 		overflow: auto;
+		text-shadow: 2px 2px 2px rgba(0,0,0,.5);
+		position: relative;
+		z-index: 2;
+
+		button {
+			background: transparent;
+			padding: 0;
+			border: 0;
+			color: $reverse-text-color;
+			font-size: 2em;
+
+			svg {
+				filter: drop-shadow(2px 2px 2px rgba(0,0,0,.5));
+			}
+		}
+
+		button:focus {
+			outline: 0;
+		}
 	}
+
+}
+
+.banner::before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
 }

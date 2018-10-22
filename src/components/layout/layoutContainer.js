@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import Layout from './layout.js';
+import { smoothScroll } from '../../common.js';
 
 class LayoutContainer extends Component {
 	constructor(props) {
@@ -11,7 +13,7 @@ class LayoutContainer extends Component {
 					name: 'BasicYGO',
 					lang: 'Python',
 					desc: 'A CLI application based on "Yu-Gi-Oh!"" Trading Card Game. Using the most basic of the card game\'s rules, two players battle each other with Monster Cards trying to reduce the other Player\'s LifePoints to 0.',
-					imageURL: '/images/BasicYGO.jpg',
+					imageURL: '/local/BasicYGO.jpg',
 					links: [
 						{
 							type: 'gitHub',
@@ -23,7 +25,7 @@ class LayoutContainer extends Component {
 					name: 'HackerNews Search',
 					lang: 'ReactJS',
 					desc: 'Using the HackerNews API provided by https://news.ycombinator.com/, this application displays articles based on user provided keywords. Additional features include result sorting, infinite scrolling, and dismissing unwanted results.',
-					imageURL: '/images/hackernews.jpg',
+					imageURL: '/local/hackernews.jpg',
 					links: [
 						{
 							type: 'gitHub',
@@ -39,7 +41,7 @@ class LayoutContainer extends Component {
 					name: 'codeRyan',
 					lang: 'ReactJS, Redux',
 					desc: 'A web application based on the board game "Codenames". Words are pulled from a word bank and assigned to each team using a pseudo random number generator. Each team tries to guess all of their words before the other team.',
-					imageURL: '/images/codeRyan.jpg',
+					imageURL: '/local/codeRyan.jpg',
 					links: [
 						{
 							type: 'gitHub',
@@ -52,7 +54,7 @@ class LayoutContainer extends Component {
 					]
 				}
 			],
-			schoolProjects: [
+/*			schoolProjects: [
 				{
 					name: 'File System',
 					lang: 'Python',
@@ -69,55 +71,64 @@ class LayoutContainer extends Component {
 					links: [
 					]
 				}
-			],
-			currentContent: 'about-me',
+			],*/
+			sectionRefs: {
+				about: React.createRef(),
+				projects: React.createRef(),
+				experience: React.createRef(),
+				contact: React.createRef(),
+			},
 			isShowingBanner: true,
 		}
 
-		this.onScroll = this.onScroll.bind(this);
 		this.onNavigationClick = this.onNavigationClick.bind(this);
+		this.onLoad = this.onLoad.bind(this);
+		this.onScroll = this.onScroll.bind(this);
+		this.onBackToTop = this.onBackToTop.bind(this);
 	}
 
 	componentDidMount() {
-		this.setState({
-			isShowingBanner: window.scrollY < 25,
-		});
-
-		window.addEventListener('scroll', this.onScroll);
+		window.addEventListener('load', this.onLoad);
 	}
 
 	componentWillUnmount() {
 		window.removeEventListener('scroll', this.onScroll);
+		window.removeEventListener('load', this.onLoad);
+	}
+
+	onLoad() {
+		window.addEventListener('scroll', this.onScroll);
 	}
 
 	onScroll() {
 		this.setState({
-			isShowingBanner: window.scrollY < 25,
+			isShowingBanner: window.scrollY < 10,
 		});
 	}
 
-	onNavigationClick(e, linkID) {
-		e.preventDefault();
-		this.setState({
-			currentContent: linkID
-		});
+	onNavigationClick(sectionRef) {
+		const myDomNode = ReactDOM.findDOMNode(sectionRef.current);
+		smoothScroll(myDomNode.offsetTop);
+	}
+
+	onBackToTop() {
+		smoothScroll(0);
 	}
 
 	render() {
 		const {
 			sideProjects,
-			schoolProjects,
-			currentContent,
+			sectionRefs,
 			isShowingBanner,
 		} = this.state;
 
 		return (
 			<Layout 
 				sideProjects={sideProjects} 
-				schoolProjects={schoolProjects} 
 				onNavigationClick={this.onNavigationClick}
-				currentContent={currentContent}
+				sectionRefs={sectionRefs}
 				isShowingBanner={isShowingBanner}
+				onBackToTopClick={this.onBackToTop}
 			/>
 		);
 	}

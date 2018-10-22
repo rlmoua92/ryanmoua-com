@@ -4,13 +4,14 @@ import Section from './section.js';
 class SectionContainer extends Component {
 	render() {
 		const {
-			sectionID,
 			children,
-			bgURL
+			bgURL,
+			bgColor,
+			transitionIn,
 		} = this.props;
 		
 		return (
-			<Section sectionID={sectionID} bgURL={bgURL}>{children}</Section>
+			<Section bgURL={bgURL} transitionIn={transitionIn} bgColor={bgColor}>{children}</Section>
 		);
 	}
 }

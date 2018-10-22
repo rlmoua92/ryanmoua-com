@@ -2,11 +2,54 @@
 
 .section {
 	background-color: $section-bg-color;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 2em 0;
 
 	&-content {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding-left: 5em;
+		padding: 1em 2em;
 		overflow: auto;
+		background-color: $section-container-bg-color;
+		box-shadow: 5px 5px 5px rgba(0,0,0,.25);
+
+		h2 {
+			text-transform: uppercase;
+    		text-align: center;
+    		display: flex;
+    		align-items: center;
+    		width: 100%;
+    		max-width: 500px;
+    		margin-right: auto;
+    		margin-left: auto;
+		}
+
+		h2::before {
+			content: " ";
+    		border-bottom: 1px solid #000;
+    		display: block;
+    		flex-grow: 1;
+    		margin-right: .5em
+		}
+
+		h2::after {
+			content: " ";
+    		border-bottom: 1px solid #000;
+    		display: block;
+    		flex-grow: 1;
+    		margin-left: .5em;
+		}
+	}
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+	.section {
+	
+		&-content {
+			width: 80%;
+			max-width: 1200px;
+			margin: 0 auto 0 10%;
+		}
 	}
 }

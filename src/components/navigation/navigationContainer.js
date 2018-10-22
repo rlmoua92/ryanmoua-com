@@ -15,81 +15,50 @@ class NavigationContainer extends Component {
 		this.state = {
 			navItems: [
 				{
-					'linkID': 'about-me',
+					'linkID': 'about',
 					'linkIcon': faAddressCard,
+					'linkTarget': '#about',
 					'linkText': 'About',
-					'type': 'Navigation',
 					'bgColor': '#F44336',
 				},
 				{
 					'linkID': 'projects',
 					'linkIcon': faFileCode,
+					'linkTarget': '#projects',
 					'linkText': 'Projects',
-					'type': 'Navigation',
 					'bgColor': '#2196F3',
 				},
-				/*{
-					'linkID': 'education',
-					'linkIcon': faGraduationCap,
-					'linkText': 'Education',
-					'type': 'Navigation',
-					'bgColor': ,
-				},*/
 				{
-					'linkID': 'resume',
+					'linkID': 'experience',
 					'linkIcon': faFileAlt,
-					'linkTarget': '/resume.pdf',
-					'linkText': 'Resume',
-					'type': 'Link',
+					'linkTarget': '#experience',
+					'linkText': 'Experience',
 					'bgColor': '#4CAF50',
 				},
 				{
 					'linkID': 'contact',
 					'linkIcon': faEnvelope,
+					'linkTarget': '#contact',
 					'linkText': 'Contact',
-					'type': 'Navigation',
 					'bgColor': '#FF9800',
 				},
 			],
-			positionLeft: window.innerWidth > 1200 ? ((window.innerWidth - 1200) / 2) : 0,
 		};
-
-		this.onWindowResize = this.onWindowResize.bind(this);
-	}
-
-	componentDidMount() {
-		window.addEventListener('resize', this.onWindowResize);
-	}
-
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.onWindowResize);
-	}
-
-	onWindowResize(e) {
-		const width = e.target.innerWidth;
-		if (width > 1200) {
-			this.setState({
-				positionLeft: (width - 1200) / 2,
-			});
-		} else {
-			this.setState({
-				positionLeft: 0,
-			});
-		}
 	}
 
 	render() {
 		const { 
 			navItems,
-			positionLeft,
 		} = this.state;
-		const { currentContent } = this.props;
+		const { 
+			sectionRefs,
+		} = this.props;
+
 		return (
 			<Navigation 
-				currentContent={currentContent}
 				navItems={navItems}
 				onNavigationClick={this.props.onNavigationClick} 
-				positionLeft={positionLeft}
+				sectionRefs={sectionRefs}
 			/>
 		);
 	}
