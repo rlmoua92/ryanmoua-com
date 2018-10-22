@@ -110,7 +110,7 @@ const Layout = (props) => {
 									</ul>
 							</div>
 						</div>
-						<div>For more information click the following button to view my résumé.</div>
+						<div>For more information please check out my résumé.</div>
 						<button><a href="/local/resume.pdf" target="_blank" rel="noopener noreferrer">View Résumé</a></button>
 					</Section>
 					<Section ref={sectionRefs.contact} transitionIn={!isShowingBanner}>
