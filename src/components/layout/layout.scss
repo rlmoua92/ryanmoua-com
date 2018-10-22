@@ -9,6 +9,10 @@
 .about-img {
 	flex-basis: 100%;
 	padding: 1em;
+
+	&-quote {
+		margin-top: .5em;
+	}
 }
 .about-content {
 	flex-basis: 100%;
