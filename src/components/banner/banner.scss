@@ -1,7 +1,7 @@
 @import '../../common.scss';
 
 .banner {
-	background-image: url(/local/banner-fpo.jpg);
+	background-image: url(/local/banner.jpg);
 	background-color: #000;
 	background-size: cover;
 	background-position: center center;
@@ -48,5 +48,5 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, .75);
+	background: rgba(0, 0, 0, .5);
 }
