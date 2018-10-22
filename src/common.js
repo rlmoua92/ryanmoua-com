@@ -16,10 +16,10 @@ export function smoothScroll(offSetY) {
 
 	function scrollTick() {
 		if (currentOffset < offSetY) {
-			currentOffset = (Math.round(currentOffset + (distance / 10)) <= offSetY) ? Math.round(currentOffset + (distance / 10)) : offSetY;
+			currentOffset = currentOffset + (distance / 10) <= offSetY ? currentOffset + (distance / 10) : offSetY;
 			window.scrollTo(0, currentOffset);
 		} else if (currentOffset > offSetY) {
-			currentOffset = (Math.round(currentOffset - (distance / 10)) >= offSetY) ? Math.round(currentOffset - (distance / 10)) : offSetY;
+			currentOffset = currentOffset - (distance / 10) >= offSetY ? currentOffset - (distance / 10) : offSetY;
 			window.scrollTo(0, currentOffset);
 		} else {
 			clearInterval(timer);

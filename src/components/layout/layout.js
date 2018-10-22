@@ -55,19 +55,15 @@ const Layout = (props) => {
 				<div>
 					<Section ref={sectionRefs.about} transitionIn={!isShowingBanner}>
 						<h2>About</h2>
-						<div className="flex flex-wrap">
+						<div className="flex flex-wrap v-align-center">
 							<div className="about-img text-center">
 								<img src="/local/ryan.png" alt="Ryan Moua" />
 							</div>
 							<div className="about-content">
-								<ul>
-									<li>Born in San Diego, CA</li>
-									<li>Went to college at Universty of California Irvine</li>
-								</ul>
-								<div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
+								<p>Like most kids nowadays, a lot of my childhood was spent in front of a computer. From playing endless hours of video games online, to tweaking my Myspace template till it was just right, to making ridiculous photo edits of my friends on Photoshop, I dabbled in almost everything my computer could offer.</p>
+								<p>Despite this, I didn’t even think about programming until the summer before my 3rd year of undergrad at the University of California Irvine. Strangely, it was in a class that taught computing skills to Chemistry majors; we learned to use the Wolfram language to create things like graphs and charts from data sets. The ability to create complex things just from typing some numbers and letters blew my mind; I was hooked. I changed my major to Computer Science the very next quarter and never looked back.</p>
+								<p>At school I was exposed to a lot of backend programming, working with languages like Python and C++. However, my first job out of college was at a Front-end website building company. As part of the product team I picked up HTML and CSS mostly on the job and played around with Javascript and JQuery when needed. As part of the SysOps team I learned to work with some AWS technologies and gained a better understanding of the backend of websites/web applications.</p>
+								<p>Using these past experiences as launching pad, I’m currently aspiring to become a full-fledged Front-end developer and am exposing myself to more technologies like ReactJS and Redux. At the end of the day, I just want to keep challenging myself and growing as a developer and to work on meaningful applications that I can be proud of.</p>
 							</div>
 						</div>
 					</Section>

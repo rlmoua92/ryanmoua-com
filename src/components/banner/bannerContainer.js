@@ -10,7 +10,11 @@ class BannerContainer extends Component {
 	}
 
 	onButtonClick() {
-		smoothScroll(10);
+		if (window.scrollY !== 10) {
+			smoothScroll(10);
+		} else {
+			smoothScroll(11);
+		}
 	}
 
 	render() {

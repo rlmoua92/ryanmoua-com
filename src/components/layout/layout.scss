@@ -8,6 +8,7 @@
 
 .about-img {
 	flex-basis: 100%;
+	padding: 1em;
 }
 .about-content {
 	flex-basis: 100%;
@@ -59,10 +60,13 @@
 	.content {
 		padding-bottom: 0;
 	}
+}
 
+@media screen and (min-width: $desktop-breakpoint) {
 	.about-img {
 		flex-basis: 50%;
 	}
+
 	.about-content {
 		flex-basis: 50%;
 	}
