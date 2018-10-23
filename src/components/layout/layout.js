@@ -81,44 +81,46 @@ const Layout = (props) => {
 					</Section>
 					<Section ref={sectionRefs.experience} transitionIn={!isShowingBanner}>
 						<h2>Experience</h2>
-						<div className="flex flex-wrap experience-content">
-							<div className="experience-left">
-								<IconHeader icon={faBuilding}>Employment</IconHeader>
-								<ul>
-									<li>Jazel Auto (September 2015 - August 2018)
-										<ul>
-											<li><em>Product Team, SysOps</em></li>
-										</ul>
-									</li>
-								</ul>
-								<IconHeader icon={faCode}>Technologies</IconHeader>
-								<ul className="flex flex-column flex-wrap">
-									<li>HTML</li>
-									<li>CSS</li>
-									<li>Javascript</li>
-									<li>ReactJS</li>
-									<li>Python</li>
-									<li>Git</li>
-									<li>Bash</li>
-									<li>AWS</li>
-									<li>WordPress</li>
-									<li>Photoshop</li>
-								</ul>
-							</div>
-							<div className="experience-right">
-								<IconHeader icon={faBook}>Education</IconHeader>
-								<ul>
-									<li>University of California Irvine (2010 - 2015)
-										<ul>
-											<li><em>Bachelor of Science in Computer Science</em></li>
-										</ul>
-									</li>
-								</ul>
-								<IconHeader icon={faAward}>Achievements</IconHeader>
-								<ul>
-									<li>Jazel Auto - 2016 Rockstar of the Year (3rd Place)</li>
-									<li>Jazel Auto - 2017 Rockstar of the Year (1st Place)</li>
-								</ul>
+						<div className="flex">
+							<div className="flex experience-content">
+								<div className="experience-left">
+									<IconHeader icon={faBuilding}>Employment</IconHeader>
+									<ul>
+										<li>Jazel Auto (September 2015 - August 2018)
+											<ul>
+												<li><em>Product Team, SysOps</em></li>
+											</ul>
+										</li>
+									</ul>
+									<IconHeader icon={faCode}>Technologies</IconHeader>
+									<ul className="flex flex-column flex-wrap">
+										<li>HTML</li>
+										<li>CSS</li>
+										<li>Javascript</li>
+										<li>ReactJS</li>
+										<li>Python</li>
+										<li>Git</li>
+										<li>Bash</li>
+										<li>AWS</li>
+										<li>WordPress</li>
+										<li>Photoshop</li>
+									</ul>
+								</div>
+								<div className="experience-right">
+									<IconHeader icon={faBook}>Education</IconHeader>
+									<ul>
+										<li>University of California Irvine (2010 - 2015)
+											<ul>
+												<li><em>Bachelor of Science in Computer Science</em></li>
+											</ul>
+										</li>
+									</ul>
+									<IconHeader icon={faAward}>Achievements</IconHeader>
+									<ul>
+										<li>Jazel Auto - 2016 Rockstar of the Year (3rd Place)</li>
+										<li>Jazel Auto - 2017 Rockstar of the Year (1st Place)</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 						<div className="text-center">

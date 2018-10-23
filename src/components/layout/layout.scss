@@ -19,26 +19,35 @@
 }
 
 .experience-content {
+	flex-wrap: wrap;
+	max-width: 400px;
+	margin: 0 auto;
 
 	ul {
 		max-height: 100px;
 	}
-}
-
-.experience-left {
-	flex-basis: 100%;
-}
-.experience-right {
-	flex-basis: 100%;
+	.experience-left {
+		flex-basis: 100%;
+	}
+	.experience-right {
+		flex-basis: 100%;
+	}
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
-	.experience-left {
-		flex-basis: 50%;
+	.experience-content {
+		justify-content: center;
+		flex-wrap: nowrap;
+		max-width: none;
+
+		.experience-left {
+			flex-basis: auto;
+		}
+		.experience-right {
+			flex-basis: auto;
+			margin-left: 1em;
+		}	
 	}
-	.experience-right {
-		flex-basis: 50%;
-	}	
 }
 
 .contact-icons {
