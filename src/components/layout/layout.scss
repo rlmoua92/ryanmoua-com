@@ -18,15 +18,18 @@
 	justify-content: center;
 }
 
+.experience-content {
+
+	ul {
+		max-height: 100px;
+	}
+}
+
 .experience-left {
 	flex-basis: 100%;
 }
 .experience-right {
 	flex-basis: 100%;
-
-	ul {
-		max-height: 100px;
-	}
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
@@ -36,6 +39,10 @@
 	.experience-right {
 		flex-basis: 50%;
 	}	
+}
+
+.contact-icons {
+	justify-content: center;
 }
 
 .footer {

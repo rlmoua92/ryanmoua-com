@@ -85,7 +85,34 @@ const Layout = (props) => {
 							<div className="experience-left">
 								<IconHeader icon={faBuilding}>Employment</IconHeader>
 								<ul>
-									<li>Jazel Auto - Product Team, SysOps (September 2015 - August 2018)</li>
+									<li>Jazel Auto (September 2015 - August 2018)
+										<ul>
+											<li><em>Product Team, SysOps</em></li>
+										</ul>
+									</li>
+								</ul>
+								<IconHeader icon={faCode}>Technologies</IconHeader>
+								<ul className="flex flex-column flex-wrap">
+									<li>HTML</li>
+									<li>CSS</li>
+									<li>Javascript</li>
+									<li>ReactJS</li>
+									<li>Python</li>
+									<li>Git</li>
+									<li>Bash</li>
+									<li>AWS</li>
+									<li>WordPress</li>
+									<li>Photoshop</li>
+								</ul>
+							</div>
+							<div className="experience-right">
+								<IconHeader icon={faBook}>Education</IconHeader>
+								<ul>
+									<li>University of California Irvine (2010 - 2015)
+										<ul>
+											<li><em>Bachelor of Science in Computer Science</em></li>
+										</ul>
+									</li>
 								</ul>
 								<IconHeader icon={faAward}>Achievements</IconHeader>
 								<ul>
@@ -93,47 +120,32 @@ const Layout = (props) => {
 									<li>Jazel Auto - 2017 Rockstar of the Year (1st Place)</li>
 								</ul>
 							</div>
-							<div className="experience-right">
-								<IconHeader icon={faBook}>Education</IconHeader>
-								<ul>
-									<li>University of California Irvine - Computer Science (2010 - 2015)</li>
-								</ul>
-								<IconHeader icon={faCode}>Technologies</IconHeader>
-									<ul className="flex flex-column flex-wrap">
-										<li>HTML</li>
-										<li>CSS</li>
-										<li>Javascript</li>
-										<li>ReactJS</li>
-										<li>Python</li>
-										<li>Git</li>
-										<li>Bash</li>
-										<li>AWS</li>
-										<li>WordPress</li>
-										<li>Photoshop</li>
-									</ul>
-							</div>
 						</div>
-						<div>For more information please check out my résumé.</div>
-						<button><a href="/local/resume.pdf" target="_blank" rel="noopener noreferrer">View Résumé</a></button>
+						<div className="text-center">
+							<p>For more information please check out my résumé.</p>
+							<button><a href="/local/resume.pdf" target="_blank" rel="noopener noreferrer">View Résumé</a></button>
+						</div>
 					</Section>
 					<Section ref={sectionRefs.contact} transitionIn={!isShowingBanner}>
 						<h2>Contact</h2>
-						<p>Have a question or just want to get in contact? Feel free to reach out via one of the methods below: </p>
-						<div className="flex">
-							<ContactIcon 
-								icon={faEnvelope}
-								link="mailto:rlmoua92@gmail.com"
-							/>
-							<ContactIcon 
-								icon={faLinkedin}
-								link="https://www.linkedin.com/in/ryan-moua/"
-								newTab={true}
-							/>
-							<ContactIcon 
-								icon={faGithub}
-								link="https://github.com/rlmoua92/"
-								newTab={true}
-							/>
+						<div className="text-center">
+							<p>Have a question or just want to get in contact? Feel free to reach out via one of the methods below: </p>
+							<div className="flex contact-icons">
+								<ContactIcon 
+									icon={faEnvelope}
+									link="mailto:rlmoua92@gmail.com"
+								/>
+								<ContactIcon 
+									icon={faLinkedin}
+									link="https://www.linkedin.com/in/ryan-moua/"
+									newTab={true}
+								/>
+								<ContactIcon 
+									icon={faGithub}
+									link="https://github.com/rlmoua92/"
+									newTab={true}
+								/>
+							</div>
 						</div>
 					</Section>
 					<div className="footer flex v-align-center">
