@@ -28,6 +28,7 @@ const Layout = (props) => {
 		sectionRefs,
 		isShowingBanner,
 		onBackToTopClick,
+		onBannerClick,
 	} = props;
 
 	return (
@@ -37,7 +38,7 @@ const Layout = (props) => {
 				timeout={500}
 				classNames="slide"
 			>
-				<Banner>
+				<Banner onButtonClick={onBannerClick}>
 					<h1>Ryan Moua.</h1>
 					<h2>Aspiring Front-end Developer.</h2>
 				</Banner>
