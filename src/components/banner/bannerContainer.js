@@ -3,24 +3,13 @@ import Banner from './banner.js';
 import { smoothScroll } from '../../common.js';
 
 class BannerContainer extends Component {
-	constructor(props) {
-		super(props);
-
-		this.onButtonClick = this.onButtonClick.bind(this);
-	}
-
-	onButtonClick() {
-		if (window.scrollY !== 10) {
-			smoothScroll(10);
-		} else {
-			smoothScroll(11);
-		}
-	}
-
 	render() {
+		const {
+			onButtonClick
+		} = this.props;
 		return (
 			<Banner 
-				onButtonClick={this.onButtonClick}
+				onButtonClick={onButtonClick}
 			>
 				{this.props.children}
 			</Banner>
