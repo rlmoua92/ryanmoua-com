@@ -7,10 +7,9 @@
 	background-position: center center;
 	color: $reverse-text-color;
 	overflow: hidden;
-	position: relative;
+	position: fixed;
 	z-index: 2;
 	height: 100vh;
-	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;

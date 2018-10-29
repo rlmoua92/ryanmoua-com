@@ -104,6 +104,7 @@ class LayoutContainer extends Component {
 
 	onScroll() {
 		if (this.state.scrollLock) {
+			window.scrollTo(0, 0);
 			this.setState({
 				scrollLock: false,
 			});

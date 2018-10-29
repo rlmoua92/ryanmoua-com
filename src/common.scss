@@ -132,8 +132,30 @@ a:hover, button:hover {
 	top: 0;
 	transition: all 500ms ease-out;
 }
-.slide-appear-done {
 
+.lockScroll-enter {
+	height: 100vh;
+	overflow: hidden;
+}
+.lockScroll-enter-active {
+	height: 100vh;
+	overflow: hidden;
+}
+.lockScroll-enter-done {
+	height: auto;
+	overflow: auto;
+}
+.lockScroll-exit {
+	height: auto;
+	overflow: auto;
+}
+.lockScroll-exit-active {
+	height: 100vh;
+	overflow: hidden;
+}
+.lockScroll-exit-done {
+	height: 100vh;
+	overflow: hidden;
 }
 
 .fade-enter {

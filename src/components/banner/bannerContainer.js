@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Banner from './banner.js';
-import { smoothScroll } from '../../common.js';
 
 class BannerContainer extends Component {
 	render() {
