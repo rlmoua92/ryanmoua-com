@@ -30,6 +30,10 @@ body {
 	font-family: $font;
 }
 
+html, body {
+	overscroll-behavior: none;
+}
+
 h3 {
 	margin: .5em 0;
 }
@@ -123,14 +127,6 @@ a:hover, button:hover {
 }
 .slide-exit-done {
 	top: -100vh;
-}
-
-.slide-appear {
-	top: -100vh;
-}
-.slide-appear-active {
-	top: 0;
-	transition: all 500ms ease-out;
 }
 
 .lockScroll-enter {
