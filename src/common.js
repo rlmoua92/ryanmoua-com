@@ -25,5 +25,5 @@ export function smoothScroll(offSetY) {
 			clearInterval(timer);
 		}
 	}
-	timer = setInterval(scrollTick, 10);
+	timer = setInterval(scrollTick, 20);
 }
