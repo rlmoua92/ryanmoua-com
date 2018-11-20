@@ -52,7 +52,23 @@ class LayoutContainer extends Component {
 							linkTarget: 'https://code-ryan.herokuapp.com/'
 						},
 					]
-				}
+				},
+				{
+					name: 'Basketball Scores',
+					lang: 'ReactJS, Redux',
+					desc: 'Using the NBA API endpoint, this web application displays the scores for all games in the current NBA season. Components and displays are built on top of Google\'s Material UI framework.',
+					imageURL: '/local/basketball-scores.jpg',
+					links: [
+						{
+							type: 'gitHub',
+							linkTarget: 'https://github.com/rlmoua92/basketball-scores'
+						},
+						{
+							type: 'heroku',
+							linkTarget: 'https://basketball-scores.herokuapp.com/'
+						},
+					]
+				},
 			],
 /*			schoolProjects: [
 				{
