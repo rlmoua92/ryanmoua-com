@@ -11,7 +11,7 @@ class LayoutContainer extends Component {
 			sideProjects: [
 				{
 					name: 'BasicYGO',
-					lang: 'Python',
+					tech: 'Python',
 					desc: 'A CLI application based on "Yu-Gi-Oh!"" Trading Card Game. Using the most basic of the card game\'s rules, two players battle each other with Monster Cards trying to reduce the other Player\'s LifePoints to 0.',
 					imageURL: '/local/BasicYGO.jpg',
 					links: [
@@ -23,7 +23,7 @@ class LayoutContainer extends Component {
 				},
 				{
 					name: 'HackerNews Search',
-					lang: 'ReactJS',
+					tech: 'ReactJS',
 					desc: 'Using the HackerNews API provided by https://news.ycombinator.com/, this application displays articles based on user provided keywords. Additional features include result sorting, infinite scrolling, and dismissing unwanted results.',
 					imageURL: '/local/hackernews.jpg',
 					links: [
@@ -39,7 +39,7 @@ class LayoutContainer extends Component {
 				},
 				{
 					name: 'codeRyan',
-					lang: 'ReactJS, Redux',
+					tech: 'ReactJS, Redux, Firebase',
 					desc: 'A web application based on the board game "Codenames". Words are pulled from a word bank and assigned to each team using a pseudo random number generator. Each team tries to guess all of their words before the other team.',
 					imageURL: '/local/codeRyan.jpg',
 					links: [
@@ -55,7 +55,7 @@ class LayoutContainer extends Component {
 				},
 				{
 					name: 'Basketball Scores',
-					lang: 'ReactJS, Redux',
+					tech: 'ReactJS, Redux',
 					desc: 'Using the NBA API endpoint, this web application displays the scores for all games in the current NBA season. Components and displays are built on top of Google\'s Material UI framework.',
 					imageURL: '/local/basketball-scores.jpg',
 					links: [
@@ -73,7 +73,7 @@ class LayoutContainer extends Component {
 /*			schoolProjects: [
 				{
 					name: 'File System',
-					lang: 'Python',
+					tech: 'Python',
 					desc: '',
 					imageURL: '',
 					links: [
@@ -81,7 +81,7 @@ class LayoutContainer extends Component {
 				},
 				{
 					name: 'Connect-K AI',
-					lang: 'C++',
+					tech: 'C++',
 					desc: '',
 					imageURL: '',
 					links: [

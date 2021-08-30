@@ -15,7 +15,7 @@ const Project = (props) => {
 				}
 			</div>
 			<div className="project-name text-left">{project.name}</div>
-			<div className="project-lang text-left">Language(s): {project.lang}</div>
+			<div className="project-lang text-left">Technologies: {project.tech}</div>
 			<div className="project-desc text-left">{project.desc}</div>
 			<div className="project-links flex">
 				{
