@@ -30,6 +30,10 @@ body {
 	font-family: $font;
 }
 
+html, body {
+	overscroll-behavior: none;
+}
+
 h3 {
 	margin: .5em 0;
 }
@@ -125,15 +129,29 @@ a:hover, button:hover {
 	top: -100vh;
 }
 
-.slide-appear {
-	top: -100vh;
+.lockScroll-enter {
+	height: 100vh;
+	overflow: hidden;
 }
-.slide-appear-active {
-	top: 0;
-	transition: all 500ms ease-out;
+.lockScroll-enter-active {
+	height: 100vh;
+	overflow: hidden;
 }
-.slide-appear-done {
-
+.lockScroll-enter-done {
+	height: auto;
+	overflow: auto;
+}
+.lockScroll-exit {
+	height: auto;
+	overflow: auto;
+}
+.lockScroll-exit-active {
+	height: 100vh;
+	overflow: hidden;
+}
+.lockScroll-exit-done {
+	height: 100vh;
+	overflow: hidden;
 }
 
 .fade-enter {
